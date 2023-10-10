@@ -6,10 +6,12 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <Navbar>
-      <NavbarBrand>
+    <Navbar height="120px" shouldHideOnScroll className="py-2">
+      <NavbarContent></NavbarContent>
+      <NavbarBrand className="flex justify-center">
         <Image src={LogoSrc} alt="Logo" width={120} />
       </NavbarBrand>
+      <NavbarContent></NavbarContent>
     </Navbar>
   )
 }
