@@ -16,8 +16,8 @@ export default function Header() {
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="hidden md:flex gap-8">
-        {menuItems.map((item) => (
-          <NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={`navbar-${index}`}>
             <LinkUI as={Link} href={item.href} color="foreground" underline="hover">
               {item.label}
             </LinkUI>

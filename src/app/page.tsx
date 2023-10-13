@@ -2,6 +2,7 @@ import Image from 'next/image'
 import LogoSrc from '@/images/logo.png'
 import { oswald } from '@/fonts'
 import { Button } from '@nextui-org/button'
+import GoogleMaps from '@/components/GoogleMaps'
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
       <div className="relative h-[700px] bg-hero bg-center bg-cover bg-no-repeat">
         <div className="w-full h-full bg-black/10">
           <div className="h-full container mx-auto px-24 flex justify-between items-center animate-fadeIn">
-            {/* <div className="p-4 bg-black/20 border border-neutral-600 rounded-sm"> */}
             <Image src={LogoSrc} alt="Logo" width="450" />
-            {/* </div> */}
           </div>
         </div>
 
@@ -46,8 +45,10 @@ export default function Home() {
         <div className="grow bg-image01 bg-center bg-cover bg-no-repeat rounded-md shrink-0" />
       </div>
 
-      <div className="container mx-auto flex gap-8">
-        <div className="w-[40%]"></div>
+      <div className="container mx-auto flex gap-8 py-16">
+        <div className="w-[40%]">
+          <GoogleMaps />
+        </div>
         <div className="grow">
           <h1 className={`${oswald.className} text-3xl`}>Das sagen unsere Kunden</h1>
         </div>
