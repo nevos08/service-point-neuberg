@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 94px;
+  transform: rotateY(180deg);
+}
+
+.shape-divider .shape-fill {
+  fill: #000000;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}

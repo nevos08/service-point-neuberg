@@ -11,7 +11,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: 'url(/hero.jpeg)',
+        hero: 'url(/hero.jpg)',
+        image01: 'url(/image01.jpg)',
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
+      },
+      dropShadow: {
+        white: '0 0 0 white',
       },
     },
   },
